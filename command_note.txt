@@ -30,16 +30,22 @@ git コマンド
 　　git commit --amend
 	vimで直前のコメントを修正できる．
 
-　　git push origin "ファイル名"
+　　git push origin branch名
 	git hubへPushする
 
 
 　　git log
         現在、作業中のブランチのcommit一覧を表示
+	
+	もし新しく作ったリポジトリにpushする場合は上のコマンドをする前に下記のコマンドをたたく
+	git remote add origin リポジトリのURI
 
 
+    git reset HEAD^
+	直前のコミットを撤回（push前）
 
-
+    git reset HEAD ファイル名	
+	インデックスからワークツリーに戻す
 
 
 

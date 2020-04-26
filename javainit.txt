@@ -1,1 +1,3 @@
 スッキリJava入門
+
+The test of editor for commit message.

@@ -1,0 +1,54 @@
+git コマンド
+
+　　git init
+　　　　initはinitializeの略
+　　　　ローカルのフォルダ（PC内のどこかのフォルダとか）をリモートリポジトリに設定すること？（この時点で中にファイルがあっても平気だった）
+　　　　git diff で「Not a git repository 」と出てくればinitされていない
+
+　　git status
+	addが必要な変更なファイル(赤色)
+	commitできる状態のファイル(緑色)
+
+　　git branch
+	自分がいまどこのブランチにいるか表示
+
+　　git branch "ブランチ名"
+	ブランチを新規作成
+
+　　git checkout "ブランチ名"
+        ブランチの移動
+
+
+　　git add "ファイル名"
+	ワークツリーからインデックスにファイルを追加
+	まだリモートリポジトリにはいってない
+	ローカルリポジトリとはどこのこと？
+
+　　git commit -m ”コミットした際のコメント”
+	変更点などを簡潔に書ける．詳細はプルリクエスト時にも書けるから書かんでよいのかも．
+
+　　git commit --amend
+	vimで直前のコメントを修正できる．
+
+　　git push origin branch名
+	git hubへPushする
+
+
+　　git log
+        現在、作業中のブランチのcommit一覧を表示
+	
+	もし新しく作ったリポジトリにpushする場合は上のコマンドをする前に下記のコマンドをたたく
+	git remote add origin リポジトリのURI
+
+
+    git reset HEAD^
+	直前のコミットを撤回（push前）
+
+    git reset HEAD ファイル名	
+	インデックスからワークツリーに戻す
+
+
+
+
+
+

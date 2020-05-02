@@ -10,15 +10,15 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 ```
 
-の記述がでたので解決策
+の記述がでたので解決策  
 <b>原因：リモートに無関係なヒストリーを持つローカルはpushできない仕様のため</b>
 
 
-# 1.
+# 1. リモートの更新をローカルに持ってくる
 $ git fetch <リモートのショートカット名>
 でローカルにリモートリポジトリのmasterを持ってくる
 
-# 2.
+# 2. 持ってきたリモートの更新をワークツリーに反映
 $ git merge -allow-unrelated-histories <リモートのショートカット名>/master
 で，ローカルに持ってきたリモートのmasterとワーキングツリーに反映させる
 
